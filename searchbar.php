@@ -1,6 +1,10 @@
 <html>
 
 <body>
+    <center>
+         <br> <br> <br>
+        <h1> RSS IMMERSION </h1>
+        <br> <br> <br>
     <form action="rssparser.php" method = "POST">
     <input type="text" name = "url" placeholder = "Paste RSS URL" autocomplete = "OFF">
     <input type="submit" value = "Submit">
@@ -8,6 +12,7 @@
     </form>
     <br>
     <br>
+    </center>
 </body>
 
 
