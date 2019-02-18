@@ -1,3 +1,18 @@
+<html>
+<body>
+    <center>
+
+        <h1> RSS IMMERSION </h1>
+    <form action="rssparser.php" method = "POST">
+    <input type="text" name = "url" placeholder = "Paste RSS URL" autocomplete = "OFF">
+    <input type="submit" value = "Submit">
+    
+    </form>
+    <br>
+    <br>
+    </center>
+</body>
+
 <?php
 include 'conndb.php';
 $html = "";
@@ -25,7 +40,5 @@ $xml = simplexml_load_file($url);
         }
     
     }
-
-
 echo $html;
 ?>
