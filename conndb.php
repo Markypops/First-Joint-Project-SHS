@@ -2,7 +2,7 @@
 $server="localhost";
 $username="root";
 $password="";
-$database="db_rm";
+$database="db_ophiuchus";
 
 
 $conn= new mysqli($server,$username,$password,$database);
