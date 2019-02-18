@@ -10,10 +10,22 @@ $xml = simplexml_load_file($url);
         $title = $xml->channel->item[$i]->title;
         $link = $xml->channel->item[$i]->link;
         $desc = $xml->channel->item[$i]->description;
-        $html .= "<div><h2>$title</h2><h3>$desc</h3><br>$link</div>";
+        $html .= "<div><h2>$title</h2><h3>$desc</h3><br><a href='$link' target='_blank'>$link</a></div>";
 
+        $sql = "INSERT INTO tbl_news_fragments(title,link,description) values('$title', '$link','$desc')";
+        $result = $conn->query($sql);
+    
+        if($result === TRUE)
+        {
+            echo "Created Successfully!<br>";
+        }
+        else
+        {
+            echo $conn->error ."<br>";
+        }
+    
     }
 
-echo $html;
 
+echo $html;
 ?>
