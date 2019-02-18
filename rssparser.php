@@ -54,7 +54,7 @@ $xml = simplexml_load_file($url);
 
         $html .= "<div><h2>$stitle</h2><h3>$sdesc</h3><br><a href='$slink' target='_blank'>$slink</a></div>";
 
-        $sql = "INSERT INTO tbl_news_fragments(title,link,description) values('$stitle', '$slink','$sdesc')";
+        $sql = "INSERT INTO tbl_news_fragments(title,link,description) values('$etitle', '$elink','$edesc')";
         $result = $conn->query($sql);
     
         if($result === TRUE)
