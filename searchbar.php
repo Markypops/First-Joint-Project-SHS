@@ -8,7 +8,6 @@
   <div class="bottom-right"></div>
   <div class="centered"></div>
 </div>
-class
         
          <br> <br> <br>
         <h1> RSS IMMERSION </h1>
