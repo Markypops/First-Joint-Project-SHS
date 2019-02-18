@@ -20,6 +20,7 @@ include 'conndb.php';
 $sql = "SELECT * FROM tbl_news_fragments";
 $result=$conn->query($sql);
 
+
 if($result->num_rows>0)
 {
 	while($row=$result->fetch_assoc())
@@ -32,7 +33,7 @@ if($result->num_rows>0)
 }
 else
 {
-	echo"Error 408: Login information not found";
+	echo $conn->error;
 }
 
     echo ("<html>
@@ -43,5 +44,6 @@ else
     
     </body>
     </html>");
+
 ?>
 
