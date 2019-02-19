@@ -9,16 +9,9 @@ echo "<html><form action = 'searchbar.php' method = 'POST'><input type = 'submit
         $title = $xml->channel->item[$i]->title;
         $link = $xml->channel->item[$i]->link;
         $desc = $xml->channel->item[$i]->description;
-        $result = $conn->query($sql);
-    
-        if($result === TRUE)
-        {
-            echo "Created Successfully!<br>";
-        }
-        else
-        {
-            echo $conn->error ."<br>";
-        }
+        $html = "<!DOCTYPE html>
+        <html>
+        <head>
             <title>Results</title>
         </head>
         <body>
